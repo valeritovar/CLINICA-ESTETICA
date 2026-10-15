@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Estética Luxury - Centro de Belleza Premium</title>
+    <meta name="description" content="Centro estético de lujo con tratamientos exclusivos, tecnología de vanguardia y resultados excepcionales. Descubre la belleza en su máxima expresión.">
+    <meta name="keywords" content="estética de lujo, belleza premium, tratamientos faciales avanzados, rejuvenecimiento láser, spa exclusivo, belleza profesional">
+    <meta name="author" content="Bella Estética Luxury">
+    <meta property="og:title" content="Bella Estética Luxury - Centro de Belleza Premium">
+    <meta property="og:description" content="Experimenta la belleza en su máxima expresión con nuestros tratamientos exclusivos">
+    <meta property="og:image" content="img/beauty-spa-center.jpg">
+    <meta property="og:url" content="#">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
+        <div class="text-center">
+            <div class="w-20 h-20 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <h2 class="text-gold text-2xl font-cormorant">Bella Estética Luxury</h2>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full top-0 z-40 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-spa text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-white font-cormorant">Bella Estética</h1>
+                        <p class="text-xs text-gold">Luxury Beauty Center</p>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-white hover:text-gold transition">Inicio</a>
+                    <a href="#servicios" class="text-white hover:text-gold transition">Servicios</a>
+                    <a href="#precios" class="text-white hover:text-gold transition">Precios</a>
+                    <a href="#galeria" class="text-white hover:text-gold transition">Galería</a>
+                    <a href="#blog" class="text-white hover:text-gold transition">Blog</a>
+                    <a href="#testimonios" class="text-white hover:text-gold transition">Testimonios</a>
+                    <a href="#citas" class="text-white hover:text-gold transition">Citas</a>
+                    <a href="#contacto" class="text-white hover:text-gold transition">Contacto</a>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-4">
+                    <button class="text-white hover:text-gold transition">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                    <button class="luxury-button text-sm">
+                        Reservar Ahora
+                    </button>
+                </div>
+                
+                <button id="mobile-menu-btn" class="lg:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4">
+                <a href="#inicio" class="block py-2 text-white hover:text-gold transition">Inicio</a>
+                <a href="#servicios" class="block py-2 text-white hover:text-gold transition">Servicios</a>
+                <a href="#precios" class="block py-2 text-white hover:text-gold transition">Precios</a>
+                <a href="#galeria" class="block py-2 text-white hover:text-gold transition">Galería</a>
+                <a href="#blog" class="block py-2 text-white hover:text-gold transition">Blog</a>
+                <a href="#testimonios" class="block py-2 text-white hover:text-gold transition">Testimonios</a>
+                <a href="#citas" class="block py-2 text-white hover:text-gold transition">Citas</a>
+                <a href="#contacto" class="block py-2 text-white hover:text-gold transition">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center parallax" 
+             style="background-image: url('img/beauty-salon-elegant.jpg');">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 text-white loading-animation">
+                    <div class="mb-6">
+                        <span class="text-gold font-semibold tracking-wider uppercase">Bienvenido al Lujo Absoluto</span>
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 font-cormorant text-shadow-luxury">
+                        Descubre tu Belleza
+                        <span class="text-gold">Exclusiva</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-gray-200 leading-relaxed">
+                        Experimenta la transformación en nuestro centro estético de lujo, donde la tecnología 
+                        de vanguardia se encuentra con el arte de la belleza para ofrecerte resultados excepcionales.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button onclick="document.getElementById('citas').scrollIntoView()" 
+                                class="luxury-button">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Agendar Consulta
+                        </button>
+                        <button onclick="document.getElementById('servicios').scrollIntoView()" 
+                                class="border-2 border-gold text-white px-8 py-3 rounded-full font-semibold hover:bg-gold hover:text-dark transition">
+                            Explorar Servicios
+                        </button>
+                    </div>
+                    
+                    <div class="flex space-x-8">
+                        <div>
+                            <div class="text-3xl font-bold text-gold">15+</div>
+                            <div class="text-gray-300">Años de Excelencia</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-gold">10,000+</div>
+                            <div class="text-gray-300">Clientes Satisfechos</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-gold">50+</div>
+                            <div class="text-gray-300">Tratamientos Premium</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 mt-10 lg:mt-0">
+                    <div class="relative">
+                        <img src="img/beauty-spa-center.jpg" 
+                             alt="Tratamiento facial de lujo" 
+                             class="rounded-lg luxury-shadow">
+                        <div class="absolute -bottom-6 -left-6 bg-gold-gradient p-6 rounded-lg luxury-shadow">
+                            <div class="text-dark font-semibold">
+                                <i class="fas fa-award mr-2"></i>
+                                Premio al Mejor Centro 2024
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gradient-to-br from-cream to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Nuestros Servicios</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Tratamientos de Lujo</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Descubre nuestra selección exclusiva de tratamientos diseñados para realzar tu belleza natural 
+                    con resultados excepcionales y duraderos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="luxury-card rounded-xl overflow-hidden hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/facial-treatment.jpg" 
+                         alt="Tratamiento facial profesional" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-4 font-cormorant">Tratamiento Facial Exclusivo</h3>
+                        <p class="text-gray-600 mb-6">
+                            Nuestro tratamiento facial signature con mascarillas terapéuticas 
+                            y técnicas avanzadas para una piel radiante y rejuvenecida.
+                        </p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li><i class="fas fa-check text-gold mr-2"></i>Mascarilla detox verde</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i>Limpieza profunda</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i>Masaje facial</li>
+                            <li><i class="fas fa-check text-gold mr-2"></i>Hidratación intensiva</li>
+                        </ul>
+                        <button class="luxury-button">
+                            Agendar Tratamiento
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="luxury-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-sparkles text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Corporal Exclusive</h3>
+                    <p class="text-gray-600 mb-6">
+                        Transforma tu cuerpo con nuestros tratamientos corporales de lujo 
+                        diseñados para esculpir tu figura perfecta.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Cavitación premium</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Radiofrecuencia medical</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Masajes terapéuticos</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Envolturas de lujo</li>
+                    </ul>
+                    <button class="text-gold font-semibold hover:text-dark transition">
+                        Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="luxury-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-magic text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Tecnología Avanzada</h3>
+                    <p class="text-gray-600 mb-6">
+                        Los tratamientos más innovadores con equipos de última generación 
+                        para resultados visibles desde la primera sesión.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Láser CO2 fraccionado</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Microagujamiento con plasma</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Luz pulsada intensa</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>HIFU facial y corporal</li>
+                    </ul>
+                    <button class="text-gold font-semibold hover:text-dark transition">
+                        Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="luxury-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-spa text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Spa de Lujo</h3>
+                    <p class="text-gray-600 mb-6">
+                        Una experiencia sensorial única con tratamientos de spa diseñados 
+                        para relajar cuerpo y mente.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Balneario terapéutico</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Aromaterapia premium</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Sauna infrared</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Jacuzzi con cromoterapia</li>
+                    </ul>
+                    <button class="text-gold font-semibold hover:text-dark transition">
+                        Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="luxury-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Ojos Expresivos</h3>
+                    <p class="text-gray-600 mb-6">
+                        Realza la belleza de tus ojos con nuestros tratamientos especializados 
+                        para una mirada espectacular.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Extensiones de pestañas</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Microblading cejas</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Lifting de pestañas</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Tratamiento contorno</li>
+                    </ul>
+                    <button class="text-gold font-semibold hover:text-dark transition">
+                        Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <div class="luxury-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-icon">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Capilar Elite</h3>
+                    <p class="text-gray-600 mb-6">
+                        Tratamientos capilares de lujo para un cabello saludable, 
+                        brillante y lleno de vida.
+                    </p>
+                    <ul class="text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Keratina premium</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Tratamiento con botox</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Reparación profunda</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Coloración profesional</li>
+                    </ul>
+                    <button class="text-gold font-semibold hover:text-dark transition">
+                        Ver Detalles <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prices Section -->
+    <section id="precios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Inversión en Belleza</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Precios Exclusivos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Paquetes premium diseñados para ofrecer los mejores resultados 
+                    con la máxima calidad y atención personalizada.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="price-card rounded-xl p-8 text-center hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Silver</h3>
+                    <div class="text-4xl font-bold text-gold mb-6">
+                        $299<span class="text-lg font-normal">/mes</span>
+                    </div>
+                    <ul class="text-gray-600 space-y-3 mb-8">
+                        <li><i class="fas fa-check text-gold mr-2"></i>2 Tratamientos faciales</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>1 Tratamiento corporal</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Consulta mensual</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Productos 10% descuento</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Acceso a spa</li>
+                    </ul>
+                    <button class="w-full luxury-button">Seleccionar Plan</button>
+                </div>
+                
+                <div class="price-card rounded-xl p-8 text-center hover-lift transform scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-gold-gradient text-dark px-6 py-2 rounded-full text-sm font-semibold">
+                            MÁS POPULAR
+                        </span>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Gold</h3>
+                    <div class="text-4xl font-bold text-gold mb-6">
+                        $599<span class="text-lg font-normal">/mes</span>
+                    </div>
+                    <ul class="text-gray-600 space-y-3 mb-8">
+                        <li><i class="fas fa-check text-gold mr-2"></i>4 Tratamientos faciales</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>2 Tratamientos corporales</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>1 Tratamiento avanzado</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Consulta quincenal</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Productos 20% descuento</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Acceso VIP al spa</li>
+                    </ul>
+                    <button class="w-full luxury-button">Seleccionar Plan</button>
+                </div>
+                
+                <div class="price-card rounded-xl p-8 text-center hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-semibold mb-4 font-cormorant">Platinum</h3>
+                    <div class="text-4xl font-bold text-gold mb-6">
+                        $999<span class="text-lg font-normal">/mes</span>
+                    </div>
+                    <ul class="text-gray-600 space-y-3 mb-8">
+                        <li><i class="fas fa-check text-gold mr-2"></i>Tratamientos ilimitados</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Tratamientos avanzados</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Consulta semanal</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Productos 30% descuento</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Acceso exclusivo VIP</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i>Servicio a domicilio</li>
+                    </ul>
+                    <button class="w-full luxury-button">Seleccionar Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-gradient-to-br from-cream to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Galería de Lujo</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Nuestro Espacio</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Descubre la elegancia y sofisticación de nuestras instalaciones diseñadas 
+                    para ofrecer una experiencia inolvidable.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 relative overflow-hidden rounded-lg luxury-shadow" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="img/beauty-salon-reception.jpg" 
+                         alt="Recepción de centro estético" 
+                         class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end">
+                        <div class="p-6 text-white">
+                            <h3 class="text-xl font-semibold font-cormorant">Recepción Principal</h3>
+                            <p>Elegancia y sofisticación</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg luxury-shadow" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="img/facial-treatment-room.jpg" 
+                         alt="Sala de tratamiento facial" 
+                         class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="text-lg font-semibold">Sala Premium 1</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg luxury-shadow" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="img/beauty-treatment-spa.jpg" 
+                         alt="Sala de spa estético" 
+                         class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="text-lg font-semibold">Sala Premium 2</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg luxury-shadow" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="img/beauty-spa-relaxation.jpg" 
+                         alt="Área de relajación spa" 
+                         class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="text-lg font-semibold">Spa & Wellness</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg luxury-shadow" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="img/beauty-lounge-area.jpg" 
+                         alt="Sala de espera VIP" 
+                         class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end">
+                        <div class="p-4 text-white">
+                            <h3 class="text-lg font-semibold">Lounge VIP</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-span-2 relative overflow-hidden rounded-lg luxury-shadow" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="img/beauty-salon-hallway.jpg" 
+                         alt="Pasillo del centro estético" 
+                         class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end">
+                        <div class="p-6 text-white">
+                            <h3 class="text-xl font-semibold font-cormorant">Corredor Principal</h3>
+                            <p>Diseño arquitectónico exclusivo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Blog de Belleza</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Consejos Expertos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Descubre los últimos tips, tendencias y secretos de belleza de nuestros expertos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="luxury-card rounded-xl overflow-hidden hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <img src="img/skincare-treatment-facial.jpg" 
+                         alt="Tratamiento facial profesional" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="text-gold text-sm font-semibold">CUIDADO FACIAL</span>
+                            <span class="mx-2 text-gray-400">•</span>
+                            <span class="text-gray-500 text-sm">15 Nov 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 font-cormorant">Los Secretos del Cuidado Anti-Aging</h3>
+                        <p class="text-gray-600 mb-4">
+                            Descubre las últimas técnicas y productos para mantener una piel juvenil y radiante...
+                        </p>
+                        <a href="#" class="text-gold font-semibold hover:text-dark transition">
+                            Leer más <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="luxury-card rounded-xl overflow-hidden hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <img src="img/beauty-nutrition-food.jpg" 
+                         alt="Nutrición para la piel" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="text-gold text-sm font-semibold">NUTRICIÓN</span>
+                            <span class="mx-2 text-gray-400">•</span>
+                            <span class="text-gray-500 text-sm">12 Nov 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 font-cormorant">Alimentos que Transforman tu Piel</h3>
+                        <p class="text-gray-600 mb-4">
+                            Conoce los alimentos clave que promueven una piel saludable desde el interior...
+                        </p>
+                        <a href="#" class="text-gold font-semibold hover:text-dark transition">
+                            Leer más <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="luxury-card rounded-xl overflow-hidden hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <img src="img/laser-beauty-treatment.jpg" 
+                         alt="Tratamiento láser estético" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="text-gold text-sm font-semibold">TRATAMIENTOS</span>
+                            <span class="mx-2 text-gray-400">•</span>
+                            <span class="text-gray-500 text-sm">10 Nov 2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 font-cormorant">Tecnología Láser: Mitos y Realidades</h3>
+                        <p class="text-gray-600 mb-4">
+                            Todo lo que necesitas saber sobre los tratamientos láser y sus beneficios...
+                        </p>
+                        <a href="#" class="text-gold font-semibold hover:text-dark transition">
+                            Leer más <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-gradient-to-br from-cream to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Testimonios</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Clientes Satisfechos</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Las experiencias y resultados de nuestros clientes hablan por sí mismos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "La experiencia más increíble de mi vida. Los tratamientos son de otro nivel, 
+                        el personal extremadamente profesional y los resultados superaron todas mis expectativas. 
+                        ¡Vale cada centavo!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="img/beauty-client-woman.jpg" 
+                             alt="Cliente satisfecha" 
+                             class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-semibold">Isabella Rodriguez</div>
+                            <div class="text-gray-500 text-sm">Cliente VIP desde 2022</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Después de probar muchos centros, finalmente encontré el lugar perfecto. 
+                        La tecnología que usan es increíble y los resultados son visibles desde la primera sesión. 
+                        ¡Recomendado 100%!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="img/beauty-client-female.jpg" 
+                             alt="Cliente feliz" 
+                             class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-semibold">Sofía Martinez</div>
+                            <div class="text-gray-500 text-sm">Cliente Gold desde 2021</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-8 hover-lift" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                        <i class="fas fa-star text-gold"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "El lujo y la atención al detalle son insuperables. Cada visita es una experiencia 
+                        transformadora. Mi piel nunca se ha visto tan radiante. Gracias Bella Estética Luxury!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="img/beauty-client-lady.jpg" 
+                             alt="Cliente premium" 
+                             class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-semibold">Valentina Gomez</div>
+                            <div class="text-gray-500 text-sm">Cliente Platinum desde 2020</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="citas" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Reserva tu Cita</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Agenda tu Transformación</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Selecciona tus servicios preferidos y agenda tu cita en nuestro sistema de reservas online.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="luxury-card rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6 font-cormorant">Selecciona tus Servicios</h3>
+                        
+                        <div class="space-y-4 mb-6">
+                            <label class="flex items-center p-4 border border-gold rounded-lg cursor-pointer hover:bg-cream transition">
+                                <input type="checkbox" class="mr-3 w-5 h-5 text-gold">
+                                <div>
+                                    <div class="font-semibold">Facial Premium</div>
+                                    <div class="text-gray-600 text-sm">90 min - $299</div>
+                                </div>
+                            </label>
+                            
+                            <label class="flex items-center p-4 border border-gold rounded-lg cursor-pointer hover:bg-cream transition">
+                                <input type="checkbox" class="mr-3 w-5 h-5 text-gold">
+                                <div>
+                                    <div class="font-semibold">Tratamiento Corporal</div>
+                                    <div class="text-gray-600 text-sm">60 min - $199</div>
+                                </div>
+                            </label>
+                            
+                            <label class="flex items-center p-4 border border-gold rounded-lg cursor-pointer hover:bg-cream transition">
+                                <input type="checkbox" class="mr-3 w-5 h-5 text-gold">
+                                <div>
+                                    <div class="font-semibold">Spa & Wellness</div>
+                                    <div class="text-gray-600 text-sm">120 min - $399</div>
+                                </div>
+                            </label>
+                            
+                            <label class="flex items-center p-4 border border-gold rounded-lg cursor-pointer hover:bg-cream transition">
+                                <input type="checkbox" class="mr-3 w-5 h-5 text-gold">
+                                <div>
+                                    <div class="font-semibold">Tratamiento Avanzado</div>
+                                    <div class="text-gray-600 text-sm">45 min - $499</div>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="border-t pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Total Estimado:</span>
+                                <span class="text-2xl font-bold text-gold">$0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="luxury-card rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6 font-cormorant">Selecciona Fecha y Hora</h3>
+                        
+                        <div class="mb-6">
+                            <div class="grid grid-cols-7 gap-2 text-center mb-4">
+                                <div class="font-semibold text-sm">Dom</div>
+                                <div class="font-semibold text-sm">Lun</div>
+                                <div class="font-semibold text-sm">Mar</div>
+                                <div class="font-semibold text-sm">Mié</div>
+                                <div class="font-semibold text-sm">Jue</div>
+                                <div class="font-semibold text-sm">Vie</div>
+                                <div class="font-semibold text-sm">Sáb</div>
+                            </div>
+                            
+                            <div class="grid grid-cols-7 gap-2">
+                                <div class="calendar-day p-2 text-gray-400">29</div>
+                                <div class="calendar-day p-2 text-gray-400">30</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">1</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">2</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">3</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">4</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">5</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">6</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">7</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">8</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">9</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">10</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">11</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">12</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">13</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">14</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">15</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">16</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">17</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">18</div>
+                                <div class="calendar-day p-2 hover:bg-cream rounded cursor-pointer">19</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block font-semibold mb-2">Horario Disponible</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="p-2 border border-gold rounded hover:bg-cream transition">9:00 AM</button>
+                                <button class="p-2 border border-gold rounded hover:bg-cream transition">10:00 AM</button>
+                                <button class="p-2 border border-gold rounded hover:bg-cream transition">11:00 AM</button>
+                                <button class="p-2 border border-gold rounded hover:bg-cream transition">2:00 PM</button>
+                                <button class="p-2 border border-gold rounded hover:bg-cream transition">3:00 PM</button>
+                                <button class="p-2 border border-gold rounded hover:bg-cream transition">4:00 PM</button>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full luxury-button">
+                            Confirmar Reserva
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gradient-to-br from-cream to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold font-semibold tracking-wider uppercase">Contacto</span>
+                <h2 class="text-5xl font-bold mb-6 font-cormorant">Conecta con Nosotros</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">
+                    Estamos aquí para responder tus preguntas y ayudarte a comenzar tu transformación.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="luxury-card rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6 font-cormorant">Envíanos un Mensaje</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block font-semibold mb-2">Nombre Completo</label>
+                                <input type="text" name="name" required
+                                       class="w-full px-4 py-3 border border-gold rounded-lg focus:outline-none focus:border-gold bg-white">
+                            </div>
+                            
+                            <div>
+                                <label class="block font-semibold mb-2">Correo Electrónico</label>
+                                <input type="email" name="email" required
+                                       class="w-full px-4 py-3 border border-gold rounded-lg focus:outline-none focus:border-gold bg-white">
+                            </div>
+                            
+                            <div>
+                                <label class="block font-semibold mb-2">Teléfono</label>
+                                <input type="tel" name="phone" required
+                                       class="w-full px-4 py-3 border border-gold rounded-lg focus:outline-none focus:border-gold bg-white">
+                            </div>
+                            
+                            <div>
+                                <label class="block font-semibold mb-2">Mensaje</label>
+                                <textarea name="message" rows="4" required
+                                          class="w-full px-4 py-3 border border-gold rounded-lg focus:outline-none focus:border-gold bg-white"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full luxury-button">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                        
+                        <div id="success-message" class="hidden mt-4 p-4 bg-green-100 text-green-700 rounded-lg">
+                            ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="luxury-card rounded-xl p-8 mb-8">
+                        <h3 class="text-2xl font-semibold mb-6 font-cormorant">Información de Contacto</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Dirección</div>
+                                    <div class="text-gray-600">Av. Luxury #123, Zona Dorada, Ciudad</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Teléfono</div>
+                                    <div class="text-gray-600">+1 234 567 8900</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Correo</div>
+                                    <div class="text-gray-600">info@bellaesteticaluxury.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Horario</div>
+                                    <div class="text-gray-600">Lunes a Sábado: 9:00 AM - 8:00 PM</div>
+                                    <div class="text-gray-600">Domingo: 10:00 AM - 6:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="luxury-card rounded-xl p-8">
+                        <h3 class="text-2xl font-semibold mb-6 font-cormorant">Síguenos</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center text-white hover:scale-110 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center text-white hover:scale-110 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center text-white hover:scale-110 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center text-white hover:scale-110 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center text-white hover:scale-110 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="luxury-gradient text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gold-gradient rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-spa text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold font-cormorant">Bella Estética</h3>
+                            <p class="text-gold text-sm">Luxury Beauty Center</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Donde el lujo encuentra la excelencia en cada tratamiento.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gold hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gold hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gold hover:text-white transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gold hover:text-white transition">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 font-cormorant">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#servicios" class="hover:text-gold transition">Servicios</a></li>
+                        <li><a href="#precios" class="hover:text-gold transition">Precios</a></li>
+                        <li><a href="#galeria" class="hover:text-gold transition">Galería</a></li>
+                        <li><a href="#blog" class="hover:text-gold transition">Blog</a></li>
+                        <li><a href="#citas" class="hover:text-gold transition">Citas</a></li>
+                        <li><a href="#contacto" class="hover:text-gold transition">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 font-cormorant">Servicios Premium</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>Facial Premium</li>
+                        <li>Corporal Exclusive</li>
+                        <li>Tecnología Avanzada</li>
+                        <li>Spa de Lujo</li>
+                        <li>Ojos Expresivos</li>
+                        <li>Capilar Elite</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 font-cormorant">Newsletter Exclusivo</h4>
+                    <p class="text-gray-300 mb-6">
+                        Suscríbete para recibir ofertas VIP y consejos de belleza exclusivos.
+                    </p>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" placeholder="Tu correo VIP" 
+                               class="flex-1 px-4 py-3 rounded-l-lg text-gray-800 focus:outline-none">
+                        <button type="submit" 
+                                class="bg-gold-gradient px-6 py-3 rounded-r-lg hover:opacity-90 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Bella Estética Luxury. Todos los derechos reservados. | 
+                   <a href="#" class="hover:text-gold transition">Política de Privacidad</a> | 
+                   <a href="#" class="hover:text-gold transition">Términos de Servicio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/573112617515?text=Hola%20Bella%20Est%C3%A9tica%20Luxury.%20Me%20gustar%C3%ADa%20agendar%20una%20cita%20y%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." 
+       class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-600 transition z-50"
+       target="_blank">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
